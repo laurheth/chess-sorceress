@@ -1,45 +1,47 @@
-// Piece constructor
-function Piece(type, position, color, symbol) {
-    this.type=type;
-    this.row = position[0];
-    this.column = position[1];
-    this.color=color;
-    this.hasMoved=false;
-    this.paragraphElement=null;
-    this.active=true;
-    this.lastMoved=0;
-    // If it's an AI piece, add to the aiPieces array
-    if (color === 'Black') {
-        board.aiPieces.push(this);
-    }
-    else {
-        board.playerPieces.push(this);
-    }
+// Piece class
+class Piece {
+    constructor(type, position, color, symbol) {
 
-    // Add the dom element containing the piece
-    this.domObject = document.createElement("DIV");
-    this.domObject.classList.add('piece');
-    if (color === 'Black') {
-        this.domObject.classList.add('black');
-    }
-    this.domObject.setAttribute('x',position[1]);
-    this.domObject.setAttribute('y',position[0]);
+        this.type=type;
+        this.row = position[0];
+        this.column = position[1];
+        this.color=color;
+        this.hasMoved=false;
+        this.paragraphElement=null;
+        this.active=true;
+        this.lastMoved=0;
 
+        // If it's an AI piece, add to the aiPieces array
+        if (color === 'Black') {
+            board.aiPieces.push(this);
+        }
+        else {
+            board.playerPieces.push(this);
+        }
 
-    // start position
-    this.domObject.style.left=`${position[1]*12.5}%`;
-    this.domObject.style.top=`${position[0]*12.5}%`;
+        // Add the dom element containing the piece
+        this.domObject = document.createElement("DIV");
+        this.domObject.classList.add('piece');
+        if (color === 'Black') {
+            this.domObject.classList.add('black');
+        }
+        this.domObject.setAttribute('x',position[1]);
+        this.domObject.setAttribute('y',position[0]);
 
-    // Add the symbol
-    this.paragraphElement = document.createElement("P");
-    this.paragraphElement.textContent=symbol;
-
-    // Attach to the board
-    this.domObject.appendChild(this.paragraphElement);
-    board.domObject.appendChild(this.domObject);
-
+        // start position
+        this.domObject.style.left=`${position[1]*12.5}%`;
+        this.domObject.style.top=`${position[0]*12.5}%`;
+    
+        // Add the symbol
+        this.paragraphElement = document.createElement("P");
+        this.paragraphElement.textContent=symbol;
+    
+        // Attach to the board
+        this.domObject.appendChild(this.paragraphElement);
+        board.domObject.appendChild(this.domObject);
+    };
     // Function to define possible target spaces
-    this.getOptions = function(attackOnly=false) {
+    getOptions(attackOnly=false) {
         let optionArr=[];
         switch(this.type) {
             case 'Pawn':
@@ -156,7 +158,7 @@ function Piece(type, position, color, symbol) {
         return optionArr;
     };
 
-    this.moveTo = function(element, x=null, y=null, progressTurn=true, testOnly=false,weightObject=null, unDoing=false) {
+    moveTo(element, x=null, y=null, progressTurn=true, testOnly=false,weightObject=null, unDoing=false) {
 
         if (x === null && y === null) {
             x = parseInt(element.getAttribute('x'));
@@ -363,15 +365,15 @@ function Piece(type, position, color, symbol) {
         return !wouldCauseCheck;
     };
 
-    this.die = function() {
+    die() {
         this.active=false;
         board.boardState[this.row][this.column] = null;
         this.domObject.classList.add('dead');
     };
 
-    this.unDie = function() {
+    unDie() {
         this.active=true;
         board.boardState[this.row][this.column] = this;
         this.domObject.classList.remove('dead');
-    }
+    };
 }
