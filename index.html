@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chess Sorceress</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Lobster+Two&display=swap" rel="stylesheet">     
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  -->
+    <script src="script/jquery.min.js"></script>
+    <script src="script/chess-piece.js"></script>
+    <script src="script/chess-board.js"></script>
+    <script src="script/chess-ai.js"></script>
+    <script src="script/chess-event.js"></script>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <!-- Inspired by the "Chess Wizard" of R.J. Macready fame -->
+            <h1>Chess sorceress</h1>
+        </div>
+    </header>
+    <div class="wrapper">
+        <main>
+            <div id="game" class="game">
+                <div class="row">
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                </div>
+                <div class="row">
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                </div>
+                <div class="row">
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                </div>
+                <div class="row">
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                </div>
+                <div class="row">
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                </div>
+                <div class="row">
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                </div>
+                <div class="row">
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                </div>
+                <div class="row">
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                </div>
+                <div class="overlaymessages hidemessage">
+                    <div class="messagebox">
+                        <p>Are you sure you want to restart the game?</p>
+                        <button id="yesRestart">Yes</button>
+                        <button id="noRestart">No</button>
+                    </div>
+                </div>
+                <div class="promotion hidemessage">
+                    <div class="messagebox">
+                        <p>Your pawn can now be promoted! What do you want them to be?</p>
+                        <button class="promoteButton" id="Queen">Queen</button>
+                        <button class="promoteButton" id="Knight">Knight</button>
+                        <button class="promoteButton" id="Rook">Rook</button>
+                        <button class="promoteButton" id="Bishop">Bishop</button>
+                    </div>
+                </div>
+            </div>
+            <p id="gameMessages" class="gameMessages"></p>
+            <button class="undo disabled">Undo!</button>
+            <button class="restart">Restart the game</button>
+        </main>
+    </div>
+    <footer>
+        <div class="wrapper">
+            <p>By Lauren Hetherington</p>
+        </div>
+    </footer>
+</body>
+</html>
