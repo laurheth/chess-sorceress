@@ -22,6 +22,7 @@
     </header>
     <div class="wrapper">
         <main>
+            <!-- Begin main Chess Board -->
             <div id="game" class="game">
                 <div class="row">
                     <div class="tile"></div>
@@ -103,6 +104,7 @@
                     <div class="tile"></div>
                     <div class="tile"></div>
                 </div>
+                <!-- Restart overlay. Starts play hidden. -->
                 <div class="overlaymessages hidemessage">
                     <div class="messagebox">
                         <p>Are you sure you want to restart the game?</p>
@@ -110,6 +112,7 @@
                         <button id="noRestart">No</button>
                     </div>
                 </div>
+                <!-- Promotion overlay. Starts play hidden. -->
                 <div class="promotion hidemessage">
                     <div class="messagebox">
                         <p>Your pawn can now be promoted! What do you want them to be?</p>
@@ -120,6 +123,7 @@
                     </div>
                 </div>
             </div>
+            <!-- End board div -->
             <p id="gameMessages" class="gameMessages"></p>
             <button class="undo disabled">Undo!</button>
             <button class="restart">Restart the game</button>
