@@ -3,10 +3,10 @@
 const chessAI = {
     // Piece weights for AI usage (personal opinion and gut feelings, don't @ me)
     pieceWeight : {
-        Pawn: 3,
+        Pawn: 5,
         Rook: 15,
-        Bishop: 14,
-        Knight: 8,
+        Bishop: 12,
+        Knight: 10,
         Queen: 20,
         // Killing the King wins the game. Maximum priority, but not cranked so high that the AI does really dumb things that will backfire
         King: 23
@@ -21,7 +21,7 @@ const chessAI = {
         King: 0 // Guarding implies retribution, but there can be no retribution after the king is slain
     },
 
-    defensiveness: 6, // factor to apply towards preserving own pieces
+    defensiveness: 7, // factor to apply towards preserving own pieces
     aggressiveness: 2, // factor to apply towards capturing enemy pieces vs merely threatening them
     maxRandom: 5,
 
