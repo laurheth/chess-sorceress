@@ -59,56 +59,56 @@ const board = {
 
 
         // Initialize all black (AI) pieces.
-        this.boardState[0][1] = new Piece('Knight',[0,1],'Black','♘');
-        this.boardState[0][2] = new Piece('Bishop',[0,2],'Black','♗');
-        this.boardState[0][3] = new Piece('Queen',[0,3],'Black','♕');
-        this.boardState[0][4] = new Piece('King',[0,4],'Black','♔');
+        this.boardState[0][1] = new Piece('Knight',[0,1],'Black','\u2658');
+        this.boardState[0][2] = new Piece('Bishop',[0,2],'Black','\u2657');
+        this.boardState[0][3] = new Piece('Queen',[0,3],'Black','\u2655');
+        this.boardState[0][4] = new Piece('King',[0,4],'Black','\u2654');
 
         this.kings.Black = this.boardState[0][4];
 
-        this.boardState[0][5] = new Piece('Bishop',[0,5],'Black','♗');
-        this.boardState[0][6] = new Piece('Knight',[0,6],'Black','♘');
+        this.boardState[0][5] = new Piece('Bishop',[0,5],'Black','\u2657');
+        this.boardState[0][6] = new Piece('Knight',[0,6],'Black','\u2658');
 
-        this.boardState[0][7] = new Piece('Rook',[0,7],'Black','♖');
-        this.boardState[0][0] = new Piece('Rook',[0,0],'Black','♖');
+        this.boardState[0][7] = new Piece('Rook',[0,7],'Black','\u2656');
+        this.boardState[0][0] = new Piece('Rook',[0,0],'Black','\u2656');
 
         this.rooks.Black.push(this.boardState[0][7]);
         this.rooks.Black.push(this.boardState[0][0]);
 
-        this.boardState[1][0] = new Piece('Pawn',[1,0],'Black','♙');
-        this.boardState[1][1] = new Piece('Pawn',[1,1],'Black','♙');
-        this.boardState[1][2] = new Piece('Pawn',[1,2],'Black','♙');
-        this.boardState[1][3] = new Piece('Pawn',[1,3],'Black','♙');
-        this.boardState[1][4] = new Piece('Pawn',[1,4],'Black','♙');
-        this.boardState[1][5] = new Piece('Pawn',[1,5],'Black','♙');
-        this.boardState[1][6] = new Piece('Pawn',[1,6],'Black','♙');
-        this.boardState[1][7] = new Piece('Pawn',[1,7],'Black','♙');
+        this.boardState[1][0] = new Piece('Pawn',[1,0],'Black','\u2659');
+        this.boardState[1][1] = new Piece('Pawn',[1,1],'Black','\u2659');
+        this.boardState[1][2] = new Piece('Pawn',[1,2],'Black','\u2659');
+        this.boardState[1][3] = new Piece('Pawn',[1,3],'Black','\u2659');
+        this.boardState[1][4] = new Piece('Pawn',[1,4],'Black','\u2659');
+        this.boardState[1][5] = new Piece('Pawn',[1,5],'Black','\u2659');
+        this.boardState[1][6] = new Piece('Pawn',[1,6],'Black','\u2659');
+        this.boardState[1][7] = new Piece('Pawn',[1,7],'Black','\u2659');
     
         // Initialize all white (player) pieces
-        this.boardState[7][1] = new Piece('Knight',[7,1],'White','♘');
-        this.boardState[7][2] = new Piece('Bishop',[7,2],'White','♗');
-        this.boardState[7][3] = new Piece('Queen',[7,3],'White','♕');
-        this.boardState[7][4] = new Piece('King',[7,4],'White','♔');
+        this.boardState[7][1] = new Piece('Knight',[7,1],'White','\u2658');
+        this.boardState[7][2] = new Piece('Bishop',[7,2],'White','\u2657');
+        this.boardState[7][3] = new Piece('Queen',[7,3],'White','\u2655');
+        this.boardState[7][4] = new Piece('King',[7,4],'White','\u2654');
 
         this.kings.White = this.boardState[7][4];
 
-        this.boardState[7][5] = new Piece('Bishop',[7,5],'White','♗');
-        this.boardState[7][6] = new Piece('Knight',[7,6],'White','♘');
+        this.boardState[7][5] = new Piece('Bishop',[7,5],'White','\u2657');
+        this.boardState[7][6] = new Piece('Knight',[7,6],'White','\u2658');
 
-        this.boardState[7][7] = new Piece('Rook',[7,7],'White','♖');
-        this.boardState[7][0] = new Piece('Rook',[7,0],'White','♖');
+        this.boardState[7][7] = new Piece('Rook',[7,7],'White','\u2656');
+        this.boardState[7][0] = new Piece('Rook',[7,0],'White','\u2656');
 
         this.rooks.White.push(this.boardState[7][7]);
         this.rooks.White.push(this.boardState[7][0]);
 
-        this.boardState[6][0] = new Piece('Pawn',[6,0],'White','♙');
-        this.boardState[6][1] = new Piece('Pawn',[6,1],'White','♙');
-        this.boardState[6][2] = new Piece('Pawn',[6,2],'White','♙');
-        this.boardState[6][3] = new Piece('Pawn',[6,3],'White','♙');
-        this.boardState[6][4] = new Piece('Pawn',[6,4],'White','♙');
-        this.boardState[6][5] = new Piece('Pawn',[6,5],'White','♙');
-        this.boardState[6][6] = new Piece('Pawn',[6,6],'White','♙');
-        this.boardState[6][7] = new Piece('Pawn',[6,7],'White','♙');
+        this.boardState[6][0] = new Piece('Pawn',[6,0],'White','\u2659');
+        this.boardState[6][1] = new Piece('Pawn',[6,1],'White','\u2659');
+        this.boardState[6][2] = new Piece('Pawn',[6,2],'White','\u2659');
+        this.boardState[6][3] = new Piece('Pawn',[6,3],'White','\u2659');
+        this.boardState[6][4] = new Piece('Pawn',[6,4],'White','\u2659');
+        this.boardState[6][5] = new Piece('Pawn',[6,5],'White','\u2659');
+        this.boardState[6][6] = new Piece('Pawn',[6,6],'White','\u2659');
+        this.boardState[6][7] = new Piece('Pawn',[6,7],'White','\u2659');
     },
 
     // Display move options for the given piece (selected via their element with an event)
@@ -412,7 +412,7 @@ const board = {
             // If a pawn was promoted, demote it
             if (undoThisMove.promotion) {
                 undoThisMove.piece.type="Pawn";
-                undoThisMove.piece.paragraphElement.textContent='♙';
+                undoThisMove.piece.paragraphElement.textContent='\u2659';
             }
 
             // Refresh the en passent details from before

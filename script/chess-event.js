@@ -44,10 +44,10 @@ $(document).ready(function() {
     // The promotion buttons!
     $('.promoteButton').on('click', function() {
         const symbols={
-            Queen: '♕',
-            Knight: '♘',
-            Rook: '♖',
-            Bishop: '♗'
+            Queen: '\u2655',
+            Knight: '\u2658',
+            Rook: '\u2656',
+            Bishop: '\u2657'
         }
         // Upgrade option is stored in the button id's
         // Symbol is grabbed from the object
