@@ -1,5 +1,5 @@
-// AI opponent for Chess. Writing a robust chess AI is a HUGE undertaking, that I don't have time to do, so I'm going to simplify a lot.
-// Note made a few days after the above comment: This AI is now better at chess than I am, whoops (though that is not necessarily saying much!)
+// AI opponent for Chess. The Chess Sorceress only considers the current board state,
+// and all currently available moves, but this is adequate for the current project.
 const chessAI = {
     // Piece weights for AI usage (personal opinion and gut feelings, don't @ me)
     pieceWeight : {
@@ -8,7 +8,8 @@ const chessAI = {
         Bishop: 14,
         Knight: 8,
         Queen: 20,
-        King: 23 // Killing the King wins the game. Maximum priority.
+        // Killing the King wins the game. Maximum priority, but not cranked so high that the AI does really dumb things that will backfire
+        King: 23
     },
 
     protectWeight : {
