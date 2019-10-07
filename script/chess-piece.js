@@ -285,7 +285,7 @@ class Piece {
                 }
                 else {
                     this.type='Queen';
-                    this.paragraphElement.textContent='♕';
+                    this.paragraphElement.textContent='\u265B';
                 }
                 moveObj.promotion = true;
             }
